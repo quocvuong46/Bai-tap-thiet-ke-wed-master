@@ -1,70 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
+
+ 
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Black Goose Bistro Summer Menu</title>
-    <link href="http://fonts.googleapis.com/css?family=Marko+One" rel="stylesheet">
-    <style> 
-        body{
-           font-family: Verdana, sans-serif;
-        }
-        h1 {font-family: "Marko One", Georgia, serif;}
-        strong{
-            font-style: italic;
-            color: tomato;
-        }
-        dt strong {color: tomato;}
-        #info {color:teal}
-        #info p{font-style: italic;}
-        .price { 
-            font-family: Georgia,serif;
-            font-style: italic;
-             color: gray;
-            }
-        .label {
-            font-weight: bold;
-            font-variant: small-caps;
-            font-style: normal;
-        }
-        p.warning,sup{
-            font-size:small;
-            color: red;
-        }
 
-    </style>
+    <meta charset="utf-8">
+
+    <title>Selectors</title>
+
+    <style>
+        html{background-color: black;}
+ * { color: red; } /* mọi phần tử đều có chữ màu đỏ */
+ h2 { color:blue;} /* các phần tử h2 có chữ màu đỏ */
+ .greencolor { color: green; } /* phần tử nào có giá trị class là greencolor sẽ có màu xanh */
+ #yellowcolor { color: yellow; } /* phần tử có giá trị ID là yellowcolor sẽ có màu vàng */
+ [class] { color: violet; } /* phần tử có thuộc tính là class sẽ có màu tím, không quan tâm giá trị class là gì */
+ h3, p, #yellowcolor { color: blue } /* các phần tử h3, p và phần tử có id="yellowcolor" sẽ có màu blue*/
+ li em { color: orange }
+ h1 em, h2 em, h3 em { color: aquamarine; }
+ li h3 em { color:gray; }
+ p > em { color: mediumspringgreen; }
+ ul + h2 { color: white; }/*chỉ có một phần tử h2 nằm ngay sau ul mới chịu tác động, trong khi các phần tử h2 khác thì không chịu tác động.*/
+ p.violetcolor { color:gold; }
+   </style>
+
 </head>
+
+ 
+
 <body>
-<div id = "info">
-    <h1>Black Goose Bistro &bull; Summer Menu</h1>
-    <p>Baker's Corner, Seekonk, Massachusetts<br>
 
-        <span class="label">Hours: Monday through Thursday:</span> 11 to 9, <span class="label">Friday and Saturday;</span> 11 to midnight</p>
+    <h2 class="greencolor">The Back of the New $20</h2>
 
-</div>
-<div id="appetizers">
-    <h2>Appetizers</h2>
-    <p>This season, we explore the spicy flavors of the southwest in our appetizer collection.</p>
-    <dl>
-        <dt>Black  bean purses</dt>
-        <dd>Spicy black bean and a blend of mexican cheeses wrapped in sheets of phyllo and baked until golden. <span class="price">$3.95</span></dd>
-        <dt class ="newitem"> Southwestern napoleons with lump crab &mdash; <strong>new item!</strong></dt>
-        <dd>Layers of light lump crab meat, bean and corn salsa, and our handmade flour tortillas. <span class="price">$7.95</span></dd>
+    <p>Have you seen the "Series <em>2004</em> $20 Notes"? The U.S. Treasury has rolled out yet another revamp of the
 
-    </dl>
-</div>
-<div id="entress">
-    <h2>Main courses</h2>
-    <p>Big, bold flavors are the name of the game this summer. Allow us to assist you with finding the perfect wine.</p>
-    <dl>
-        <dt class ="newitem">Jerk rotisserie chicken with fried plantains &mdash; <strong>new item!</strong></dt>
-        <dd>Tender chicken slow-roasted on the rotisserie, flavored with spicy and fragrant jerk sauce and served with fried plantains and fresh mango. <strong>Very spicy.</strong> <span class="price">$12.95</span></dd>
-        <dt>Shrimp sate kebabs with peanut sauce</dt>
-        <dd>Skewers of shrimp marinated in lemongrass, garlic, and fish sauce then grilled to perfection. Served with spicy peanut sauce and jasmine rice. <span class="price">$12.95</span></dd>
-        <dt>Grilled skirt steak with mushroom fricasee</dt>
-        <dd>Flavorful skirt steak marinated in Asian flavors grilled as you like it<sup>*</sup>. Served over a blend of sauteed wild mushrooms with a side of blue cheese mashed potatoes. <span class="price">$16.95</span></dd>
-    </dl>
-</div>
-<p class="warning"><sup>*</sup> We are required to warn you that undercooked food is a health risk.</p> 
+        U.S. <a href=""><em>twenty</em></a> dollar bill in an effort to stop those pesky counterfeiters once and for
+
+        all.</p>
+
+    <h2 class="greencolor">The first 20s</h2>
+
+    <ul>
+
+        <li>
+
+            <h3>This is <em>first</em> item</h3>
+
+        </li>
+
+        <li>This is <em>second</em> item</li>
+
+        <li>
+
+            <h2>This is <em>third</em> item</h2>
+
+        </li>
+
+    </ul>
+
+    <h2 id="yellowcolor">Too Many <em>20s</em></h2>
+
+    <p class="violetcolor">The last paragraph</p>
+
+    <h2>Another 20s</h2>
+  
 </body>
+
+ 
+
 </html>
